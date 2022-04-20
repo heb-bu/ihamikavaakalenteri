@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Kesä Kalenteri</title>
+    <link rel="stylesheet" href="Css.css">
+    
+    <script src="script.js"></script>
+</head>
+<body>
+   <div class="luukku">
+<div class="laatikko">
+    Luukku 1
+
+</div>
+   </div>
+
+
+    
+</body>
+</html>
