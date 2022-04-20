@@ -1,0 +1,39 @@
+body {
+    background-color: lightblue;
+
+
+}
+.luukku1 {
+    color: green;
+    background-color: rgb(250, 10, 130);
+    font-size: 250px;
+    background-image: url("https://pbs.twimg.com/media/EY226r0WkAAuc35.jpg");
+    
+}
+.luukku {
+    size: 300%;
+    
+}
+.luukku2 {
+    color: green;
+    background-color: rgb(250, 10, 130);
+    font-size: 200px;
+    
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/779607575830347483/4B6B585BD8C2F4D2F93F360B60CA46B1B7E2A536/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true")
+}
+.luukku2 background-img {
+    
+width: 300px;
+}
+
+.luukku .laatikko{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: rgb(150, 54, 54);
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
