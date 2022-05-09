@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesä Kalenteri</title>
+    <link rel="stylesheet" href="tyyli.css">
+</head>
+<body>
+    <img onmouseover="checkDate(29.4)" onmouseout="normalImg(this)"  src="hymy.png" alt="Smiley" width="90" height="92">
+<button  id="nappi1" onmouseover="localDate(this) " onmouseout="normalImg(this)" onclick="checkDate()"></button>
+
+
+
+
+    <script>
+      
+        
+        function normalImg(x) {
+         
+          x.style.backgroundColor = "grey";
+}
+function checkDate(dateAvailable){
+    var date2 = (new Date());
+            let text1 = date2.toLocaleDateString();
+            var nyt1 = "9.5.2022";
+        
+        if ( text1 <= nyt1 ){
+            document.getElementById("nappi1").style.transform = "rotateY(180deg)";
+        
+        } else {
+            window.alert("EI VIELÄ");
+        }
+        }
+
+        function localDate(currentDate){
+            var date1 = (new Date());
+            let text = date1.toLocaleDateString();
+            console.log(text)
+            var nyt = "9.5.2022";
+            
+            if ( text >= nyt ){
+               
+                document.getElementById("nappi1").style.backgroundColor = "blue";
+
+           
+        
+        } else {
+            
+            document.getElementById("nappi1").style.backgroundColor = "red";
+            window.alert("EI VIELÄ");
+            
+        }
+
+        }
+          </script>
+
+
+</body>
+</html>
