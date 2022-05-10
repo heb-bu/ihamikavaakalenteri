@@ -1,0 +1,121 @@
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+
+p{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+
+}
+
+.flip-box, .flip-box2 {
+    background-color: transparent;
+    width: 520px;
+    height: 420px;
+    border: px solid #ee0707;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 0%;
+    
+    float: left;
+    margin: 30px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner, .flip-box-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    margin-top: 60px;
+    float: left;
+   
+    
+  
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container 
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  } */
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back, .flip-box-front2, .flip-box-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 50%;
+    border: 5px solid #433e3e;
+    font-size: 35px;
+    line-height: 120px;
+    top: 25%;
+    margin: 10px;
+    float: left;
+    
+    
+    
+    
+
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front, .flip-box-front2 {
+    background-color: rgb(216, 239, 10);
+    color: black;
+    border-radius: 50%;
+    border: 10px solid grey;
+    left: 150px
+    
+  }
+  
+  /* Style the back side */
+  .flip-box-back   {
+    background-color: dodgerblue;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    border-radius: 50%;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ca6af764-9bd1-4efd-96c3-0020033f7425/d95pvvm-faa4e399-46ce-4870-95eb-af1aa8b1c5e4.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NhNmFmNzY0LTliZDEtNGVmZC05NmMzLTAwMjAwMzNmNzQyNVwvZDk1cHZ2bS1mYWE0ZTM5OS00NmNlLTQ4NzAtOTVlYi1hZjFhYThiMWM1ZTQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6gajaF87IjPJ5cT8PeawL69SI4z7UlM5NIdLVivI7R0");
+    left: -160px
+    
+  }
+  .flip-box-back2 {
+    background-color: dodgerblue;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    border-radius: 50%;
+    background-image: url("https://www.vastavalo.net/albums/userpics/11077/normal_lintsi_0367.jpg");
+    left: -160px
+  }
+ 
+
+  @media only screen and (max-width: 600px) {
+    .flip-box {width: 80%;} 
+    .flip-box-back {width: 100%;}
+    .flip-box-front {width: 100%;}
+    .flip-box-inner {width: 100%;}
+
+    .flip-box {left: 0px;} 
+    .flip-box-back {left: -20px;} 
+    .flip-box-back {left: -10px;} 
+    .flip-box-front {left: 0px;} 
+    .flip-box-inner {left: 0px;} 
+
+    .flip-box {float: none;} 
+    .flip-box-back {float: none;}  
+    .flip-box-front {float: none;} 
+    .flip-box-inner {float: none;} 
+
+
+  }
+
+
+  
+
+
+
+
+
