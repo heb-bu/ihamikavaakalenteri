@@ -1,44 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  
+  --fw-normal: 400;
+  --fw-bold: 700;
+  
+  --clr: #b7c9e5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
-    background-color: rgb(230, 25, 25);
-    background-image: url("kesö.jfif");
-background-repeat: no-repeat;
-background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Oswald', sans-serif;
+  background: url("https://s3.amazonaws.com/ritalbradley-dev-photos/twinkle-back.gif");
+}
+p{
+color: red;
+}
+h3{
+color: rgb(219, 15, 238);
+}
+.card {
+  width: 400px;
+  
+ 
+  
+
+}
+h4{
+    font-size: 100px;
+    animation: color-change 2.5s infinite;
+}
+
+@keyframes color-change {
+    0% {color: red;}
+    50% {color: blue;}
+    100% {color: red;}
+}
+
+.card__content {
+  text-align: center;
+  position: relative;
+  padding: 15em 5em;
+  transition: transform 3s;
+  
+ 
+  transform-style: preserve-3d;
+  
+}
+
+/*
+.card:hover .card__content {
+  transform: rotateY(.5turn);
+}
+
+*/
+.card__front,
+.card__back,
+ .card__front2, .card__front3
+ , .card__front4
+ , .card__front5
+ , .card__front6
+ , .card__front6
+ , .card__front7
+ , .card__front8
+ , .card__front9
+ , .card__front10
+ , .card__front11
+ , .card__front12
+ , .card__front13 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
+  float: left;
+  border-radius: 20px;
+  margin: 20px;    /*väli laatikoilla*/
+  
+}
+
+.card__back {
+  background-color: var(--clr);
+  background-image: url(ranta.jpg);
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #333;
+  
+}
+
+.card__back::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px solid currentColor;
+  transform: var(--level-one);
+}
+
+.card__title {
+  font-size: 15px;
+  transform: var(--level-three);
+  order: 2;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  transform: var(--level-two);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-weight: var(--fw-bold);
+  opacity: .7;
+}
+
+.card__body {
+  transform: var(--level-two);
+  font-weight: var(fw-normal);
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 
 
-button {
-    position: relative; 
-    display: block;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    line-height: 270px;
-    background: rgb(119, 116, 116);
-    border-radius: 50%;
-    font-size: 250px;
-    color: rgb(255, 255, 255);
-    transition: .5s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    margin: 0 15px;
+
+.card__front {
+  transform: rotateY(.5turn);
+  color: var(--clr);
+  background: #333;
+  background-image: url("1_suomenlinna.png");
+  
 }
-button::before {
-    content: '1';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ffee10;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
-  }
+.card__front2 {
+    transform: rotateY(.5turn);
+  color: var(--clr);
+  background: #333;
+  background-image: url("2_uff.png");
+}
+.card__front3 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("3_kolmekruunua.png");
+}
+.card__front4 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("4_juhannusvalkeat_seurasaari.png");
+}
+.card__front5 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("5_tuska.png");
+}
+.card__front6 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("6_nuuksio.png");
+}
+.card__front7 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("7_hkicup.png");
+}
+.card__front8 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("8_sipoonkorpi.png");
+}
+.card__front9 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("9_MERIPAIVAT_JEES.png");
+}
+.card__front10 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("10_jtline.png");
+}
+.card__front11 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("11_hanko.png");
+}
+.card__front12 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("12_kissakahvi.png");
+}
+.card__front13 {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+    background-image: url("1_suomenlinna.png");
+}
+
